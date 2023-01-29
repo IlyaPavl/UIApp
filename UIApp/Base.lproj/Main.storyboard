@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="XvW-hm-Fdd">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Проверка знаний слов-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="UIApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dxQ-HV-nSb">
+                                <rect key="frame" x="115" y="640.66666666666663" width="160" height="34.333333333333371"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="160" id="st7-S0-VXZ"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Показать слово"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="12"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="pressButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bMn-Ng-aN2"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Нажми кнопку, чтобы появилось слово" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="ERX-9S-XMW">
+                                <rect key="frame" x="21.666666666666657" y="218" width="346.66666666666674" height="20.666666666666657"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="K7U-mZ-dRs">
+                                <rect key="frame" x="122.66666666666669" y="725" width="145" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="3Kc-vf-a7r"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="31" id="duS-bl-Boc"/>
+                                </constraints>
+                                <segments>
+                                    <segment title="Русский"/>
+                                    <segment title="English"/>
+                                </segments>
+                                <connections>
+                                    <action selector="chooseSegement:" destination="BYZ-38-t0r" eventType="valueChanged" id="FWQ-By-1Iq"/>
+                                </connections>
+                            </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Слово in English" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="9" translatesAutoresizingMaskIntoConstraints="NO" id="voU-bs-YEt">
+                                <rect key="frame" x="129.66666666666666" y="278.66666666666669" width="130.99999999999997" height="20"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="K7U-mZ-dRs" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="94Y-Ke-Wt2"/>
+                            <constraint firstItem="ERX-9S-XMW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="21.666666666666657" id="A8q-6o-wAH"/>
+                            <constraint firstItem="ERX-9S-XMW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="127" id="Qzh-f5-5gs"/>
+                            <constraint firstItem="ERX-9S-XMW" firstAttribute="centerX" secondItem="dxQ-HV-nSb" secondAttribute="centerX" id="R8H-Sl-Ac1"/>
+                            <constraint firstItem="ERX-9S-XMW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UyS-dD-nJ0"/>
+                            <constraint firstItem="voU-bs-YEt" firstAttribute="top" secondItem="ERX-9S-XMW" secondAttribute="bottom" constant="40" id="mh9-Th-wba"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="K7U-mZ-dRs" secondAttribute="bottom" constant="54" id="rZH-E1-JW7"/>
+                            <constraint firstItem="ERX-9S-XMW" firstAttribute="centerX" secondItem="K7U-mZ-dRs" secondAttribute="centerX" id="sHh-Un-Fgf"/>
+                            <constraint firstItem="ERX-9S-XMW" firstAttribute="centerX" secondItem="voU-bs-YEt" secondAttribute="centerX" id="wia-pu-aJW"/>
+                            <constraint firstItem="K7U-mZ-dRs" firstAttribute="top" secondItem="dxQ-HV-nSb" secondAttribute="bottom" constant="50" id="zud-S4-Dxr"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Проверка знаний слов" id="aXe-hZ-78p"/>
+                    <connections>
+                        <outlet property="button" destination="dxQ-HV-nSb" id="BnY-vV-Gtl"/>
+                        <outlet property="segmentedControl" destination="K7U-mZ-dRs" id="Cun-y4-nie"/>
+                        <outlet property="textLabel" destination="ERX-9S-XMW" id="qj5-NC-gEI"/>
+                        <outlet property="translateLabel" destination="voU-bs-YEt" id="wsP-KW-scc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="956.92307692307691" y="-27.014218009478672"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="MC8-rQ-VFp">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="XvW-hm-Fdd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="N5R-7g-2cP">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="gEN-Qh-vsx"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="isd-eS-9db" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="27.69230769230769" y="-27.014218009478672"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
